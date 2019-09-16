@@ -8,7 +8,7 @@ describe("<Dashboard />", () => {
 
     it("matches snapshot", () => {
       const tree = renderer.create(<Dashboard />); 
-
+  
       expect(tree.toJSON()).toMatchSnapshot();
     });
 
@@ -29,7 +29,7 @@ describe("<Dashboard />", () => {
         const lockButton = component.getByText(/lock gate/i);
         const closeButton = component.getByText(/close gate/i);
         fireEvent.click(closeButton);
-
+        
         fireEvent.click(lockButton);
         component.getByText(/locked/i);
         component.getByText(/closed/i);
@@ -41,4 +41,4 @@ describe("<Dashboard />", () => {
 
 
 
-  }); 
+  });
